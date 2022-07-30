@@ -10,6 +10,7 @@ import {
 
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Categories from '../components/Categories';
 const HomeScreen = () => {
   const nav = useNavigation();
 
@@ -53,7 +54,12 @@ const HomeScreen = () => {
         <AdjustmentsIcon color='#00CCBB' />
       </View>
       {/**Main section content */}
-      <ScrollView></ScrollView>
+      <ScrollView className='bg-gray-200'>
+        {/**categories */}
+        <Categories />
+
+        {/**Featured */}
+      </ScrollView>
     </SafeAreaView>
   );
 };
